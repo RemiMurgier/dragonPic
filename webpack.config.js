@@ -20,11 +20,10 @@ module.exports = {
 	output: {
 		path: BUILD_DIR,
 		filename: '[name].bundle.js',
-		publicPath: '/'
+		publicPath: '/javascripts/'
 	},
 	devServer: {
 		contentBase: path.resolve(__dirname, 'build'),
-		publicPath: '/javascripts/',
 		historyApiFallback: true,
 		watchContentBase: true,
 		compress: true,
