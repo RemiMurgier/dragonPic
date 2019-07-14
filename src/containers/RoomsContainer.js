@@ -27,9 +27,14 @@ export class RoomsConatainer extends Component {
     }
 
     componentDidMount() {
-        setTimeout(setFakeRooms(20), 2000) 
+        setFakeRooms(60)
         this.setState({rooms: fakeRooms})
         this.getRooms()
+    }
+
+    componentWillUnmount() {
+        fakeRooms = []
+
     }
 
     getRooms = async () => {
